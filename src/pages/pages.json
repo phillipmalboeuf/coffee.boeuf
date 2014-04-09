@@ -1,0 +1,12 @@
+{
+	"pages":[
+		{
+			"file": "index.html",
+			"layout": ["_header.html","index.html","_footer.html"]
+		},
+		{
+			"file": "about.html",
+			"layout": ["_header.html","about.html","_footer.html"]
+		}
+	]
+}

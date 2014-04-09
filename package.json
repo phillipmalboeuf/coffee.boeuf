@@ -1,0 +1,24 @@
+{
+  "name": "ca.phillipmalboeuf",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-less": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-contrib-handlebars": "~0.7.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-connect": "~0.7.1",
+    "handlebars": "~2.0.0-alpha.2",
+    "grunt-divshot": "~0.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Phillip Malboeuf <phillip.malboeuf@gmail.com>"
+}

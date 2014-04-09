@@ -1,0 +1,38 @@
+
+button,
+input[type="submit"],
+.button {
+	-webkit-appearance: none;
+	display: inline-block;
+
+	padding: ($vertical_rythm/1.5) ($vertical_rythm*5);
+	border: 1px solid $black;
+
+
+	text-decoration: none;
+
+
+	.black_back & {
+		border: 1px solid $light_grey;
+	}
+	
+
+	&:focus,
+	&:hover {
+		border: 1px solid $green;
+	}
+
+
+	
+
+
+	&.button--big {
+		font-size: 1.714rem;
+	}
+
+	&.button--tight {
+		padding: ($vertical_rythm/1.5) ($vertical_rythm*2);
+	}
+
+}
+

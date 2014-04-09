@@ -1,0 +1,28 @@
+
+.grid {
+	padding: 0;
+	margin-left: -$gutter;
+	font-size: 0;
+}
+	
+	.col {
+		display: inline-block;
+		vertical-align: top;
+		
+		padding-left: $gutter;
+		font-size: $base_size;
+		
+
+		@for $i from 1 through $number_of_columns { 
+			&.col--#{$i}of#{$number_of_columns} { width: (100% / $number_of_columns * $i); }
+			&.col--push_#{$i}of#{$number_of_columns} { margin-left: (100% / $number_of_columns) * $i; }
+		  	&.col--extend_#{$i}of#{$number_of_columns} { margin-right: (100% / $number_of_columns) * $i; }
+
+		  	@each $breakpoint in $breakpoints {
+				&.col--#{nth($breakpoint, 1)}--#{$i}of#{$number_of_columns} { @media all and (max-width:#{nth($breakpoint, 2)}) { width: (100% / 12) * $i; } }
+				&.col--#{nth($breakpoint, 1)}--push_#{$i}of#{$number_of_columns} { @media all and (max-width:#{nth($breakpoint, 2)}) { margin-left: (100% / 12) * $i; } }
+				&.col--#{nth($breakpoint, 1)}--extend_#{$i}of#{$number_of_columns} { @media all and (max-width:#{nth($breakpoint, 2)}) { margin-right: (100% / 12) * $i; } }
+			}
+		}
+	}
+

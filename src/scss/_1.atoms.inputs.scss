@@ -1,0 +1,31 @@
+:focus {
+	outline: none !important;
+	-moz-outline-style: none;
+}
+
+
+input,
+optgroup,
+select,
+textarea,
+.input {
+	-webkit-appearance: none;
+	width: 100%;
+
+	background: transparent;
+	padding: $vertical_rythm/1.5;
+	border: 1px solid $black;
+
+
+	&.input--quantity {
+		text-align: center;
+
+		width: 4rem;
+
+		padding-left: 0;
+		padding-right: 0.05rem; 
+		border-top: 0;
+		border-bottom: 0;
+	}
+}
+
