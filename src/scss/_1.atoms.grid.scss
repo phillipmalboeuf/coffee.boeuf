@@ -3,6 +3,10 @@
 	padding: 0;
 	margin-left: -$gutter;
 	font-size: 0;
+
+	&.grid--no_gutter {
+		margin-left: 0; 
+	}
 }
 	
 	.col {
@@ -11,6 +15,10 @@
 		
 		padding-left: $gutter;
 		font-size: $base_size;
+
+		.grid--no_gutter > & {
+			padding-left: 0; 
+		}
 		
 
 		@for $i from 1 through $number_of_columns { 

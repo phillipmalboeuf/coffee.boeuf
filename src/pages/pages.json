@@ -5,8 +5,16 @@
 			"layout": ["_header.html","index.html","_footer.html"]
 		},
 		{
-			"file": "about.html",
-			"layout": ["_header.html","about.html","_footer.html"]
+			"file": "work.html",
+			"layout": ["_header.html","work.html","_footer.html"]
+		},
+		{
+			"file": "blog.html",
+			"layout": ["_header.html","blog.html","_footer.html"]
+		},
+		{
+			"file": "styleguide.html",
+			"layout": ["_header.html","styleguide.html","_footer.html"]
 		}
 	]
 }

@@ -8,25 +8,30 @@ html {
 }
 
 body {
-	color: $black;
+	color: $dark_grey;
 	background: white;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
+	color: $black;
 	font-family: $headings_font;
 	font-weight: normal;
 	letter-spacing: 0.1rem;
 
-	margin: 0 0 ($vertical_rythm*2);
+	margin: ($vertical_rythm*1.5) 0 $vertical_rythm;
 
+
+	&:first-child {
+		margin-top: 0;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
 	}
 
-	p + &, ul + &, ol + &, figure + & {
-		margin-top: ($vertical_rythm*2);
+	& + & {
+		margin-top: 0;
 	}
 }
 
@@ -49,12 +54,20 @@ h4 {
 	font-size: 1.2rem;
 }
 
+h5 {
+	font-size: 1.1rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
 small {
 	font-size: 0.8rem;
 }
 
 
-p, ul, ol, figure {
+p, ul, ol, figure, blockquote, pre {
 	margin: 0 0 $vertical_rythm;
 }
 
@@ -62,8 +75,21 @@ p, ul, ol, figure {
 		margin: ($vertical_rythm*4) 0;
 	}
 
-ul, ol {
+ul, ol, blockquote {
 	padding-left: 1.429rem;
+}
+
+blockquote {
+	position: relative;
+	font-style: italic;
+
+	&:before {
+		content: "\"";
+		font-size: 1.4rem;
+
+		position: absolute;
+		left: 0;
+	}
 }
 
 
@@ -77,8 +103,11 @@ a {
 	color: inherit;
 	text-decoration: none;
 
-	display: inline-block;
 	border-bottom: 1px dotted $black;
+
+	.black_back & {
+		border-bottom: 1px dotted white;
+	}
 
 	&:focus,
 	&:hover {
@@ -91,6 +120,9 @@ a {
 	}
 }
 
+em {
+}
+
 
 hr {
 	margin: ($vertical_rythm*1.2) 0;
@@ -98,13 +130,23 @@ hr {
 	border-top: 1px dotted $black;
 
 
-	&.hr--white {
-		margin: ($vertical_rythm*7) 0;
-		border-top: 1px solid white;
-	}
-
-	.grid & {
+	.grid > & {
 		margin-left: $gutter; 
+	}
+}
+
+
+pre,
+code {
+	font-size: 0.8rem;
+
+	&[class*="language-"] {
+		background: transparent;
+		padding: 0;
+
+		-moz-tab-size: 2;
+		-o-tab-size: 2;
+		tab-size: 2;
 	}
 }
 

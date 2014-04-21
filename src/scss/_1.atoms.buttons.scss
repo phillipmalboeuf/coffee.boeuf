@@ -4,35 +4,42 @@ input[type="submit"],
 .button {
 	-webkit-appearance: none;
 	display: inline-block;
+	position: relative;
 
-	padding: ($vertical_rythm/1.5) ($vertical_rythm*5);
+	padding: ($vertical_rythm/1.5) $vertical_rythm;
+	margin-bottom: $vertical_rythm;
+
+	background: transparent;
 	border: 1px solid $black;
+	box-shadow: 0 1px 0 $black;
 
 
+	text-align: center;
 	text-decoration: none;
 
 
-	.black_back & {
-		border: 1px solid $light_grey;
-	}
+
 	
 
 	&:focus,
 	&:hover {
-		border: 1px solid $green;
+		color: $blue;
+		border: 1px solid $blue;
+		box-shadow: 0 1px 0 $blue;
 	}
 
-
-	
+	&:active {
+		top: 1px;
+		box-shadow: none;
+	}
 
 
 	&.button--big {
-		font-size: 1.714rem;
+		padding: ($vertical_rythm*1.5) ($vertical_rythm*2.5);
 	}
 
-	&.button--tight {
-		padding: ($vertical_rythm/1.5) ($vertical_rythm*2);
+	&.button--full {
+		width: 100%;
 	}
-
 }
 

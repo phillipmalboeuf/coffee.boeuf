@@ -107,19 +107,19 @@ module.exports = function(grunt) {
 
     'divshot:push:development': {
       options: {
-        root: './build/',
-        routes: {
-          '**': 'index.html'
-        }
+        root: './build/'
       }
     },
 
     'divshot:push:staging': {
       options: {
-        root: './build/',
-        routes: {
-          '**': 'index.html'
-        }
+        root: './build/'
+      }
+    },
+
+    'divshot:push:production': {
+      options: {
+        root: './build/'
       }
     }
 
@@ -157,6 +157,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['handlebars', 'build_pages', 'sass', 'coffee', 'connect', 'watch']);
   grunt.registerTask('push:dev', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:development']);
   grunt.registerTask('push:staging', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:staging']);
+  grunt.registerTask('push:production', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:production']);
 
 };
 

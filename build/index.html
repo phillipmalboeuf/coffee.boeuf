@@ -10,11 +10,12 @@
 
 
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
 
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="//cdn.jsdelivr.net/prism/0.1/prism.css" rel="stylesheet" type="text/css">
 
     <link href="/css/all.css" rel="stylesheet" type="text/css">
   </head>
@@ -23,16 +24,15 @@
   <body>
 
     <div id="main" role="main">
-<div class="grid">
+<div class="grid grid--no_gutter">
 	<div class="col col--6of12">
 		<div class="padded">
-			<h2>Allô,</h2>
 			<h2><strong>I'm Phil Malboeuf,</strong> a freelance front-end developer working out of Montréal.</h2>
 			<h4>Yes, I'd love to hear about that crazy project of yours. <a href="#">Email me</a></h4>
 		</div>
 
 		<div class="padded grey_back">
-			<p>I tend to obsess over grids, interaction design, JS frameworks, APIs, and user experience research. If you need that kind of work, <span class="green">I'm currently available for freelance contracts</span>. Get in touch:
+			<p>I tend to obsess over grids, interaction design, JS frameworks, APIs, and usability research. If you need that kind of work, <span class="green">I'm currently available for freelance contracts</span>. Get in touch:
 			
 			<p>{twitter: <a href="#">@phillipmalboeuf</a>}</p>
 			<p>{github: <a href="#">phillipmalboeuf</a>}</p>
@@ -55,10 +55,6 @@
 		</div>
 
 		<div class="padded work_box work_box--wcco">
-			Les Beats
-		</div>
-
-		<div class="padded work_box work_box--wcco">
 			Moto
 		</div>
 	</div>
@@ -67,6 +63,7 @@
 
 		
 		<footer class="padded black_back text_center">
+            <p><small>[<a href="/">Home</a>, <a href="/work.html">Work</a>, <a href="/blog.html">Blog</a>, <a href="#">Contact</a>, <a href="#">Dashboard</a>, <a href="/styleguide.html">Styleguide</a>]</small></p>
 			<small>© Phillip Malboeuf 2014</small>
 		</footer>
 
@@ -78,8 +75,13 @@
 
 
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.runtime.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/prism/0.1/prism.full.min.js"></script>
 
 
 

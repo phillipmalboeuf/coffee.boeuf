@@ -1,16 +1,18 @@
 
 .white { color: white; }
-.light_grey { color: $light_grey; }
+.black { color: $black; }
+.dark_grey { color: $dark_grey; }
 .grey { color: $grey; }
 .green { color: $green; }
 .blue { color: $blue; }
+.red { color: $red; }
+.yellow { color: $yellow; }
 
 .grey_back { background: $grey; }
-.light_grey_back { background: $light_grey; }
 .blue_back { background: $blue; }
 
 .black_back { 
-	@extend .light_grey;
+	color: white;
 	background: $black; 
 }
 
@@ -25,7 +27,6 @@
 .big_bottom { margin-bottom: ($vertical_rythm*3); }
 .bigass_bottom { margin-bottom: ($vertical_rythm*4); }
 
-.big_top { margin-top: ($vertical_rythm*3); }
 
 .text_left { text-align: left; }
 .text_center { text-align: center; }
