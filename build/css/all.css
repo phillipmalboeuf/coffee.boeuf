@@ -7,8 +7,11 @@
 .dark_grey {
   color: #2b2828; }
 
-.grey {
+.light_grey {
   color: #f2f2f2; }
+
+.grey {
+  color: #777777; }
 
 .green {
   color: #5c9b5d; }
@@ -22,8 +25,11 @@
 .yellow {
   color: #ed970f; }
 
-.grey_back {
+.light_grey_back {
   background: #f2f2f2; }
+
+.grey_back {
+  background: #777777; }
 
 .blue_back {
   background: #0066ff; }
@@ -121,17 +127,16 @@ p, ul, ol, figure, blockquote, pre {
 .figure--banner {
   margin: 4rem 0; }
 
-ul, ol, blockquote {
+ul, ol {
   padding-left: 1.429rem; }
 
 blockquote {
-  position: relative;
-  font-style: italic; }
-  blockquote:before {
-    content: "\"";
-    font-size: 1.4rem;
-    position: absolute;
-    left: 0; }
+  color: #777777;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center; }
+  blockquote cite {
+    color: #2b2828; }
 
 img {
   width: 100%; }

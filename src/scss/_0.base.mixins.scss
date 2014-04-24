@@ -2,12 +2,14 @@
 .white { color: white; }
 .black { color: $black; }
 .dark_grey { color: $dark_grey; }
+.light_grey { color: $light_grey; }
 .grey { color: $grey; }
 .green { color: $green; }
 .blue { color: $blue; }
 .red { color: $red; }
 .yellow { color: $yellow; }
 
+.light_grey_back { background: $light_grey; }
 .grey_back { background: $grey; }
 .blue_back { background: $blue; }
 

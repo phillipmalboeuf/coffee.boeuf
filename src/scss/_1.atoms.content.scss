@@ -75,20 +75,19 @@ p, ul, ol, figure, blockquote, pre {
 		margin: ($vertical_rythm*4) 0;
 	}
 
-ul, ol, blockquote {
+ul, ol {
 	padding-left: 1.429rem;
 }
 
 blockquote {
-	position: relative;
+	color: $grey;
+	font-size: 1.2rem;
+
 	font-style: italic;
+	text-align: center;
 
-	&:before {
-		content: "\"";
-		font-size: 1.4rem;
-
-		position: absolute;
-		left: 0;
+	cite {
+		color: $dark_grey;
 	}
 }
 
@@ -149,7 +148,4 @@ code {
 		tab-size: 2;
 	}
 }
-
-
-
 
