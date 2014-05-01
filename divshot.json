@@ -1,8 +1,0 @@
-{
-  "name": "boeuf",
-  "root": "build",
-  "clean_urls": true,
-  "error_page": "404.html",
-  "cache_control": {},
-  "routes": {}
-}

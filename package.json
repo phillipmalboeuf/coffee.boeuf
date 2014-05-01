@@ -14,8 +14,7 @@
     "grunt-contrib-handlebars": "~0.7.0",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-connect": "~0.7.1",
-    "handlebars": "~2.0.0-alpha.2",
-    "grunt-divshot": "~0.3.1"
+    "handlebars": "~2.0.0-alpha.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -103,24 +103,6 @@ module.exports = function(grunt) {
           cache_control: {}
         }
       }
-    },
-
-    'divshot:push:development': {
-      options: {
-        root: './build/'
-      }
-    },
-
-    'divshot:push:staging': {
-      options: {
-        root: './build/'
-      }
-    },
-
-    'divshot:push:production': {
-      options: {
-        root: './build/'
-      }
     }
 
 
@@ -133,7 +115,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-divshot');
 
 
   grunt.registerTask('build_pages', 'Build pages.', function() {
@@ -155,9 +136,6 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['handlebars', 'build_pages', 'sass', 'coffee', 'connect', 'watch']);
-  grunt.registerTask('push:dev', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:development']);
-  grunt.registerTask('push:staging', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:staging']);
-  grunt.registerTask('push:production', ['handlebars', 'build_pages', 'sass', 'coffee','divshot:push:production']);
 
 };
 
