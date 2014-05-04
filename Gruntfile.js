@@ -82,6 +82,12 @@ module.exports = function(grunt) {
       sass: {
         files: 'src/scss/**/*.scss',
         tasks: ['sass'],
+        options: {
+          livereload: false
+        }
+      },
+      css: {
+        files: 'build/css/all.css'
       },
       coffee: {
         files: 'src/coffee/**/*.coffee',

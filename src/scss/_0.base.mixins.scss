@@ -1,4 +1,15 @@
 
+@mixin transform($transform...) {
+	-ms-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+
+@mixin translate($x, $y, $z: 0) {
+	@include transform(translate3d($x, $y, $z));
+}
+
+
 .white { color: white; }
 .black { color: $black; }
 .dark_grey { color: $dark_grey; }
@@ -11,16 +22,32 @@
 
 .light_grey_back { background: $light_grey; }
 .grey_back { background: $grey; }
-.blue_back { background: $blue; }
+.blue_back { 
+	color: $yellow;
+	background: $blue; 
+}
 
 .black_back { 
-	color: white;
+	color: $light_grey;
 	background: $black; 
 }
 
 
 .padded {
 	padding: 2.3rem 2rem 2.6rem;
+}
+
+.relative {
+	position: relative;
+}
+
+.centered {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	@include translate(-50%, -50%);
 }
 
 
@@ -40,3 +67,11 @@
 	display: inline-block;
 	line-height: 1.2;
 }
+
+.invisible { visibility: hidden; }
+
+
+
+
+
+

@@ -23,7 +23,7 @@
   color: #ed5565; }
 
 .yellow {
-  color: #ed970f; }
+  color: #fbd036; }
 
 .light_grey_back {
   background: #f2f2f2; }
@@ -32,14 +32,27 @@
   background: #777777; }
 
 .blue_back {
+  color: #fbd036;
   background: #0066ff; }
 
 .black_back {
-  color: white;
+  color: #f2f2f2;
   background: #1e1e1e; }
 
 .padded {
   padding: 2.3rem 2rem 2.6rem; }
+
+.relative {
+  position: relative; }
+
+.centered {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0); }
 
 .flat_bottom {
   margin-bottom: 0; }
@@ -72,6 +85,9 @@
   display: inline-block;
   line-height: 1.2; }
 
+.invisible {
+  visibility: hidden; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -86,7 +102,6 @@ body {
   background: white; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #1e1e1e;
   font-family: "Apercu", sans-serif;
   font-weight: normal;
   letter-spacing: 0.1rem;
@@ -129,6 +144,12 @@ p, ul, ol, figure, blockquote, pre {
 
 ul, ol {
   padding-left: 1.429rem; }
+  ul.no_style, ol.no_style {
+    list-style-type: none;
+    padding-left: 0; }
+
+li {
+  margin-bottom: 0.5rem; }
 
 blockquote {
   color: #777777;
@@ -147,7 +168,12 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted #1e1e1e; }
   .black_back a {
-    border-bottom: 1px dotted white; }
+    border-bottom: 1px dotted #f2f2f2; }
+  .blue_back a {
+    border-bottom: 1px dotted #fbd036; }
+    .blue_back a:focus, .blue_back a:hover {
+      color: white;
+      border-bottom: 1px solid white; }
   a:focus, a:hover {
     color: #0066ff;
     border-bottom: 1px solid #0066ff; }
@@ -535,3 +561,25 @@ textarea,
     padding-right: 0.05rem;
     border-top: 0;
     border-bottom: 0; }
+
+i {
+  line-height: 0.8; }
+
+.icon--large {
+  font-size: 4rem; }
+
+.work--moto a:focus, .work--moto a:hover {
+  color: #0033cc;
+  border-bottom: 1px solid #0033cc; }
+
+.moto_blue {
+  color: #0033cc; }
+  .moto_blue a {
+    border-bottom: none; }
+    .moto_blue a:focus, .moto_blue a:hover {
+      color: #fbd036;
+      border-bottom: 1px solid #fbd036; }
+
+.moto_blue_back {
+  color: white;
+  background: #0033cc; }

@@ -1,0 +1,36 @@
+
+.work--moto {
+
+	a {
+
+		&:focus,
+		&:hover {
+			color: $moto_blue;
+			border-bottom: 1px solid $moto_blue;
+		}
+	}
+}
+
+.moto_blue {
+	color: $moto_blue;
+
+	a {
+		border-bottom: none;
+
+		&:focus,
+		&:hover {
+			color: $yellow;
+			border-bottom: 1px solid $yellow;
+		}
+	}
+}
+
+	
+.moto_blue_back { 
+	color: white;
+	background: $moto_blue;
+}
+
+
+
+

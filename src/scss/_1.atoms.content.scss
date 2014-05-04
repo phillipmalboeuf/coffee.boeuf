@@ -14,7 +14,6 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-	color: $black;
 	font-family: $headings_font;
 	font-weight: normal;
 	letter-spacing: 0.1rem;
@@ -77,7 +76,17 @@ p, ul, ol, figure, blockquote, pre {
 
 ul, ol {
 	padding-left: 1.429rem;
+
+	&.no_style {
+		list-style-type: none;
+		padding-left: 0;
+	}
 }
+	
+	li {
+		margin-bottom: $vertical_rythm/2;
+	}
+
 
 blockquote {
 	color: $grey;
@@ -105,7 +114,17 @@ a {
 	border-bottom: 1px dotted $black;
 
 	.black_back & {
-		border-bottom: 1px dotted white;
+		border-bottom: 1px dotted $light_grey;
+	}
+
+	.blue_back & {
+		border-bottom: 1px dotted $yellow;
+
+		&:focus,
+		&:hover {
+			color: white;
+			border-bottom: 1px solid white;
+		}
 	}
 
 	&:focus,
