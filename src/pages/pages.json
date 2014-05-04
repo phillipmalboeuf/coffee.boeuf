@@ -13,6 +13,10 @@
 			"layout": ["_header.html","blog.html","_footer.html"]
 		},
 		{
+			"file": "contact.html",
+			"layout": ["_header.html","contact.html","_footer.html"]
+		},
+		{
 			"file": "styleguide.html",
 			"layout": ["_header.html","styleguide.html","_footer.html"]
 		}
