@@ -1,0 +1,25 @@
+{
+	"posts":[
+		{
+			"file": "mongo-flask-api.html",
+			"date": "# Coming Soon",
+			"title": "Building A Restful API with Mongo and Flask",
+			"source": "2014-05-09-contentgeneration.hbs",
+			"layout": "_layout.hbs"
+		},
+		{
+			"file": "static-content-generation-grunt.html",
+			"date": "# Coming Soon",
+			"title": "Static Content Generation with Grunt",
+			"source": "2014-05-09-contentgeneration.hbs",
+			"layout": "_layout.hbs"
+		},	
+		{
+			"file": "coffee-domain.html",
+			"date": "Monday, May 5, 2014",
+			"title": "My .coffee domain",
+			"source": "2014-05-05-mycoffeedomain.hbs",
+			"layout": "_layout.hbs"
+		}
+	]
+}

@@ -1,24 +1,26 @@
 {
+	"head": "_head.html",
+	"footer": "_footer.html",
 	"pages":[
 		{
 			"file": "index.html",
-			"layout": ["_header.html","index.html","_footer.html"]
+			"layout": ["splash.html"]
+		},
+		{
+			"file": "index_wip.html",
+			"layout": ["index.html"]
 		},
 		{
 			"file": "work.html",
-			"layout": ["_header.html","work.html","_footer.html"]
-		},
-		{
-			"file": "blog.html",
-			"layout": ["_header.html","blog.html","_footer.html"]
+			"layout": ["work.html"]
 		},
 		{
 			"file": "contact.html",
-			"layout": ["_header.html","contact.html","_footer.html"]
+			"layout": ["contact.html"]
 		},
 		{
 			"file": "styleguide.html",
-			"layout": ["_header.html","styleguide.html","_footer.html"]
+			"layout": ["styleguide.html"]
 		}
 	]
 }

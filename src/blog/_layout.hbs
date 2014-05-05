@@ -1,0 +1,26 @@
+
+
+<div class="grid grid--no_gutter">
+	<div class="col col--2of12">
+		<div class="padded">
+			<h4>Recently</h4>
+			<p>
+				<ul class="no_style">
+					{{#posts}}
+					<li><a href="/blog/{{file}}">{{title}}</a><br>{{date}}</li>
+					{{/posts}}
+				</ul>
+			</p>
+		</div>
+	</div>
+
+
+	<div class="col col--8of12">
+		
+
+		<article class="grid">
+			{{{content}}}
+		</article>
+	</div>
+	
+</div>

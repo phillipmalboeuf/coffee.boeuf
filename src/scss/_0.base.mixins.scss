@@ -9,6 +9,12 @@
 	@include transform(translate3d($x, $y, $z));
 }
 
+@mixin transition($transition...) {
+	-ms-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
 
 .white { color: white; }
 .black { color: $black; }

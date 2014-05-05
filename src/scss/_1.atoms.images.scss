@@ -1,0 +1,18 @@
+
+img {
+	display: block;
+	width: 100%;
+}
+
+	.img--bw {
+		-webkit-filter: grayscale(1) contrast(1.5);
+		filter: grayscale(1) contrast(1.5);
+
+		@include transition(filter 0.5s, -webkit-filter 0.5s);
+
+  		&:hover {
+  			-webkit-filter: none;
+			filter: none;
+  		}
+	}
+

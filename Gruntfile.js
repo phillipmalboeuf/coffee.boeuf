@@ -75,6 +75,10 @@ module.exports = function(grunt) {
         files: ['src/pages/**/*.html'],
         tasks: ['build_pages'],
       },
+      build_posts: {
+        files: ['src/blog/**/*.hbs'],
+        tasks: ['build_posts'],
+      },
       handlebars: {
         files: 'src/templates/**/*.hbs',
         tasks: ['handlebars'],
@@ -124,24 +128,48 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('build_pages', 'Build pages.', function() {
-    var pages = grunt.file.readJSON('src/pages/pages.json').pages;
+    var config = grunt.file.readJSON('src/pages/pages.json');
+    var pages = config.pages;
     
     for (var i = 0; i < pages.length; i++) {
       grunt.log.writeln('Building page: '+pages[i].file);
       
       var html = "";
+      html += grunt.file.read('src/pages/'+config.head)+grunt.util.linefeed;
       for (var j = 0; j < pages[i].layout.length; j++) {
           html += grunt.file.read('src/pages/'+pages[i].layout[j])+grunt.util.linefeed;
       };
+      html += grunt.file.read('src/pages/'+config.footer);
 
       grunt.file.write('build/'+pages[i].file, html);
     };
   });
 
 
+  grunt.registerTask('build_posts', 'Build posts.', function() {
+    var config = grunt.file.readJSON('src/pages/pages.json');
+    var posts = grunt.file.readJSON('src/blog/blog.json').posts;
+    Handlebars = require('handlebars');
+    var template, html = null;
+
+    for (var i = 0; i < posts.length; i++) {
+      grunt.log.writeln('Building post: blog/'+posts[i].file);
+      post_template = Handlebars.compile(grunt.file.read('src/blog/'+posts[i].source));
+      layout_template = Handlebars.compile(grunt.file.read('src/blog/'+posts[i].layout));
+      
+      html = "";
+      html += grunt.file.read('src/pages/'+config.head)+grunt.util.linefeed;
+      html += layout_template({posts: posts, content: post_template(posts[i])})+grunt.util.linefeed;
+      html += grunt.file.read('src/pages/'+config.footer);
+
+      grunt.file.write('build/blog/'+posts[i].file, html);
+    };
+  });
 
 
-  grunt.registerTask('default', ['handlebars', 'build_pages', 'sass', 'coffee', 'connect', 'watch']);
+
+
+  grunt.registerTask('default', ['handlebars', 'build_pages', 'build_posts', 'sass', 'coffee', 'connect', 'watch']);
 
 };
 

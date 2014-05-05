@@ -14,7 +14,7 @@
   color: #777777; }
 
 .green {
-  color: #5c9b5d; }
+  color: #4d906f; }
 
 .blue {
   color: #0066ff; }
@@ -158,9 +158,6 @@ blockquote {
   text-align: center; }
   blockquote cite {
     color: #2b2828; }
-
-img {
-  width: 100%; }
 
 a {
   outline: none !important;
@@ -500,6 +497,20 @@ code {
   @media all and (max-width: 64rem) {
     .col.col--medium--extend_12of12 {
       margin-right: 100%; } }
+
+img {
+  display: block;
+  width: 100%; }
+
+.img--bw {
+  -webkit-filter: grayscale(1) contrast(1.5);
+  filter: grayscale(1) contrast(1.5);
+  -ms-transition: filter 0.5s, -webkit-filter 0.5s;
+  -webkit-transition: filter 0.5s, -webkit-filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s; }
+  .img--bw:hover {
+    -webkit-filter: none;
+    filter: none; }
 
 button,
 input[type="submit"],
