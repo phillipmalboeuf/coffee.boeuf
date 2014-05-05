@@ -94,7 +94,7 @@
   box-sizing: border-box; }
 
 html {
-  font: 20px/1.4 "Apercu", sans-serif;
+  font: 20px/1.4 "Apercu Regular", sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 body {
@@ -102,7 +102,7 @@ body {
   background: white; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Apercu", sans-serif;
+  font-family: "Apercu Regular", sans-serif;
   font-weight: normal;
   letter-spacing: 0.1rem;
   margin: 1.5rem 0 1rem; }
@@ -176,6 +176,9 @@ a {
     border-bottom: 1px solid #0066ff; }
   a.a--big {
     font-size: 1.286rem; }
+
+strong {
+  font-family: "Apercu Bold", sans-serif; }
 
 hr {
   margin: 1.2rem 0;
